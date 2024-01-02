@@ -1,0 +1,3 @@
+#!/bin/bash
+[ -z "$PYCODE" ] || python3 -c "$PYCODE"
+
