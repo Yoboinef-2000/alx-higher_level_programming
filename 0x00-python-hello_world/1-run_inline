@@ -1,3 +1,2 @@
 #!/bin/bash
-[ -z "$PYCODE" ] || python3 -c "$PYCODE"
-
+[-z "$PYCODE"] || python3 -c "$PYCODE"
