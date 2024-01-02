@@ -1,0 +1,2 @@
+#!/usr/bin/bash
+[ -z "$PYFILE" ] || { python3 -m py_compile "$PYFILE" && echo "${PYFILE}c"; }
