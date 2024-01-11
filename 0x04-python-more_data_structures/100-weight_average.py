@@ -9,6 +9,6 @@ def weight_average(my_list=[]):
         for i in my_list:
             totalsum = totalsum + (i[0] * i[1])
             isdividedby = isdividedby + i[1]
-        if isdividedbt == 0:
+        if isdividedby == 0:
             return 0
         return (totalsum/isdividedby)
