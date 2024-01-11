@@ -1,18 +1,11 @@
 #!/usr/bin/python3
 
 def only_diff_elements(set_1, set_2):
-    i = 0
-    j = 0
+    if set_1 is None or set_2 is None:
+        return set()
 
-    sett1 = list(set_1)
-    sett2 = list(set_2)
+    diff_set_1 = set_1.difference(set_2)
+    diff_set_2 = set_2.difference(set_1)
+    result_set = diff_set_1.union(diff_set_2)
 
-    while (i < len(sett1)):
-        while (j < len(sett2)):
-            if (sett1[i] == sett2[j]):
-                del sett1[i]
-                del sett2[j]
-            j += 1
-        i += 1
-    newList = sett1 + sett2
-    return (newList)
+    return result_set
