@@ -10,4 +10,5 @@ class Square:
     Methods:
     - None yet, as this is just a basic structure.
     """
-    pass
+    def __init__ (self):
+        pass
