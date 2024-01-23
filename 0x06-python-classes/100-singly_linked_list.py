@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 class Node:
     """
     This class defines a node of a singly linked list.
