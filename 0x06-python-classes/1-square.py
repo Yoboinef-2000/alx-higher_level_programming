@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
-"""
-This is a sqaure class that will have
-a private instance attribute called size
-"""
+"""This is a square class."""
+
 
 class Square:
-    def __init__(self, size):
-        self.__size = size
+    """This is a square class."""
 
+    def __init__(self, size):
+        """Initialize a new instance of the Square class."""
+        self.__size = size
