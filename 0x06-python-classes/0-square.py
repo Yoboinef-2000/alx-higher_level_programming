@@ -1,14 +1,9 @@
 #!/usr/bin/python3
 
+"""Creates an empty class
+"""
 class Square:
     """
     This class represents a square.
-
-    Attributes:
-    - None at the moment, as this is an empty class definition.
-
-    Methods:
-    - None yet, as this is just a basic structure.
     """
-    def __init__ (self):
-        pass
+    pass
