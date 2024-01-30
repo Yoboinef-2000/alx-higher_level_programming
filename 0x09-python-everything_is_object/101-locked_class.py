@@ -1,6 +1,13 @@
 #!/usr/bin/python3
 
+"""Locked Class."""
+
+
 class LockedClass:
+    """Locked Class."""
+
+    __slots__ = ["first_name"]
 
     def __init__(self):
-        __slots__ = ["first_name"]
+        """Pass them all."""
+        pass
