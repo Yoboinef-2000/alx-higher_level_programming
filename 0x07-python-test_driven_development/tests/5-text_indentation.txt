@@ -1,0 +1,28 @@
+Testing text_indentation function:
+**********************************
+
+>>> text_indentation("Hello. How are you today? I hope all is well.")
+Hello
+
+ How are you today
+
+ I hope all is well
+
+>>> text_indentation("This is a test: checking text indentation.")
+This is a test
+
+ checking text indentation
+
+>>> text_indentation("Let's try it with some dots...")
+Let's try it with some dots..
+
+>>> text_indentation("And what about colons: are they working?")
+And what about colons
+
+ are they working
+
+>>> text_indentation(123)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
