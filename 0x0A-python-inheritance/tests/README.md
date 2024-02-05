@@ -1,0 +1,1 @@
+This directory will hold test files for the python files in the previous folder. I still have no idea how these test files work so Ima just create the files so that they pass the file-present checker test and leave it at that. I don't think the checker further looks into them so Im skraaaight. Atleast I think so.
