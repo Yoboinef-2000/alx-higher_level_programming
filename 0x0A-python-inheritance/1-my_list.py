@@ -2,6 +2,7 @@
 
 """Inheritance."""
 
+
 class MyList(list):
     """MyList inherits from list."""
 
