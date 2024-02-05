@@ -8,5 +8,6 @@ class MyList(list):
 
     def print_sorted(self):
         """Print the list, but sorted (ascending sort)."""
-        getreckedNoImeangetSorted = sorted(self)
+        getreckedNoImeangetSorted = self[:]
+        getreckedNoImeangetSorted.sort()
         print(getreckedNoImeangetSorted)
