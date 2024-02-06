@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+"""Import json."""
 import json
 
 "I have to include this line."""
