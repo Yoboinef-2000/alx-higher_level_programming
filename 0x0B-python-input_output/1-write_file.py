@@ -3,8 +3,9 @@
 """I have to include this line."""
 
 
-def write_file(filename="", mode="w", text=""):
+def write_file(filename="", text=""):
     """Write a string to a text file (UTF8) and returns
     the number of characters written."""
-    with open(filename, encoding="utf-8") as ffile:
-        return (ffile.write(text))
+    with open(filename, "w", encoding="utf-8") as ffile:
+        writeFile = ffile.write(text)
+        return (writeFile)
