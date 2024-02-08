@@ -1,5 +1,53 @@
 # 1-my_list.txt
 
-# Test Case 1: Check Instantation
->>> isinstance(MyList, list)
+# Test Case 1: Check Instantiation
+>>> isinstance(MyList(), list)
 True
+
+# Test Case 2: Check inherits from list
+>>> isinstance(MyList(), MyList)
+True
+
+# Test Case 3: Check __str__
+>>> obj = MyList()
+>>> str(obj)
+'[]'
+
+# Test Case 4: Check append()
+>>> obj = MyList()
+>>> obj.append(1)
+>>> obj
+[1]
+
+# Test Case 5: Check print_sorted() with sorted append
+>>> obj = MyList()
+>>> obj.append(3)
+>>> obj.append(1)
+>>> obj.print_sorted()
+[1, 3]
+
+# Test Case 6: Check print_sorted() with not sorted append
+>>> obj = MyList()
+>>> obj.append(2)
+>>> obj.append(1)
+>>> obj.print_sorted()
+[2, 1]
+
+# Test Case 7: Check print_sorted() with no sorted append with negative number
+>>> obj = MyList()
+>>> obj.append(-2)
+>>> obj.append(5)
+>>> obj.print_sorted()
+[-2, 5]
+
+# Test Case 8: Check print_sorted() with empty list
+>>> obj = MyList()
+>>> obj.print_sorted()
+[]
+
+# Test Case 9: Check print_sorted() returns a new list
+>>> obj = MyList()
+>>> sorted_list = obj.print_sorted()
+>>> sorted_list
+[]
+
