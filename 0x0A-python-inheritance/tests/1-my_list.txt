@@ -1,37 +1,5 @@
 # 1-my_list.txt
 
-# Test Case 1: Normal case with integers
-my_list_1 = MyList([2, 3])
-my_list_1.print_sorted()
-
-# Test Case 2: Normal case with floats
-my_list_2 = MyList([2.0, 3.0])
-my_list_2.print_sorted()
-
-# Test Case 3: Normal case with one float and one integer
-my_list_3 = MyList([2, 3.0])
-my_list_3.print_sorted()
-
-# Test Case 4: Normal case with negative numbers
-my_list_4 = MyList([-2, -3])
-my_list_4.print_sorted()
-
-# Test Case 5: Normal case with default value
-my_list_5 = MyList([98])
-my_list_5.print_sorted()
-
-# Test Case 6: Another normal case with integers
-my_list_6 = MyList([4, 5])
-my_list_6.print_sorted()
-
-# Test Case 7: Another normal case with floats
-my_list_7 = MyList([1.5, 2.5])
-my_list_7.print_sorted()
-
-# Test Case 8: Another normal case with one float and one integer
-my_list_8 = MyList([3, 1.0])
-my_list_8.print_sorted()
-
-# Test Case 9: Another normal case with negative numbers
-my_list_9 = MyList([-5, 3])
-my_list_9.print_sorted()
+# Test Case 1: Check Instantation
+>>> isinstance(MyList, list)
+True
