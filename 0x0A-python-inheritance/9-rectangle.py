@@ -13,9 +13,9 @@ class BaseGeometry:
     def integer_validator(self, name, value):
         """Raise more exception messages."""
         if type(value) is not int:
-            raise TypeError("<name> must be an integer")
+            raise TypeError("{} must be an integer".format(name))
         if int(value) <= 0:
-            raise ValueError("<name> must be greater than 0")
+            raise ValueError("{} must be greater than 0".format(name))
 
 
 class Rectangle(BaseGeometry):
@@ -34,4 +34,4 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         """Return the string representation."""
-        return("[Rectangle] {}/{}".format(self.__width, self.__height))
+        return ("[Rectangle] {}/{}".format(self.__width, self.__height))
