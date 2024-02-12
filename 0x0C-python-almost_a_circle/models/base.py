@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""Import json and os."""
+"""Import json and csv."""
 import json
 import csv
 """Base Class."""
@@ -60,3 +60,50 @@ class Base:
             isYouDumborIsYouDumb = cls()
         isYouDumborIsYouDumb.update(**dictionary)
         return (isYouDumborIsYouDumb)
+
+    @classmethod
+    def load_from_file(cls):
+        """Got this from mot. Hope it works."""
+        filename = str(cls.__name__) + ".json"
+        try:
+            with open(filename, 'r') as file:
+                dict_list = Base.from_json_string(file.read())
+                return [cls.create(**i) for i in dict_list]
+        except IOError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Serialize list_objs to CSV file."""
+        if list_objs is None:
+            list_objs = []
+        filename = f"{cls.__name__}.csv"
+        with open(filename, mode='w', newline='') as file:
+            writer = csv.writer(file)
+            for obj in list_objs:
+                writer.writerow(obj.to_csv_row())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Deserialize CSV file to a list of instances."""
+        filename = f"{cls.__name__}.csv"
+        instances = []
+        try:
+            with open(filename, mode='r', newline='') as file:
+                reader = csv.reader(file)
+                for row in reader:
+                    instances.append(cls.from_csv_row(row))
+        except FileNotFoundError:
+            pass
+        return (instances)
+
+    def to_csv_row(self):
+        """Convert object attributes to a CSV row."""
+        chupapi = "to_csv_row method must be implemented in each subclass"
+        raise NotImplementedError(chupapi)
+
+    @classmethod
+    def from_csv_row(cls, csv_row):
+        """Create an instance from a CSV row."""
+        chupapi = "from_csv_row method must be implemented in each subclass"
+        raise NotImplementedError(chupapi)

@@ -142,3 +142,12 @@ class Rectangle(Base):
             'x': self.__x,
             'y': self.__y
         }
+
+    def to_csv_row(self):
+        """Convert Rectangle attributes to a CSV row."""
+        return ([self.id, self.width, self.height, self.x, self.y])
+
+    @classmethod
+    def from_csv_row(cls, csv_row):
+        """Create a Rectangle instance from a CSV row."""
+        return (cls(*map(int, csv_row[1:])))
