@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 const numArgs = process.argv.length;
 if (numArgs < 2) {
   console.log('Missing size');
