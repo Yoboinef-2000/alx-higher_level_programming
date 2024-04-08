@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 const numargs = process.argv.length;
 const allargs = process.argv;
 if (numargs <= 3) {
