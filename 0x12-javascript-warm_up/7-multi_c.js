@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 const firstargument = process.argv;
 const firstInt = Number(firstargument[2]);
 if (isNaN(firstInt))

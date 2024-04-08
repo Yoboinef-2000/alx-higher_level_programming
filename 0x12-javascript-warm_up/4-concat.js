@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 const arguments = process.argv;
 const numArgs = process.argv.length;
 let firstargument;
