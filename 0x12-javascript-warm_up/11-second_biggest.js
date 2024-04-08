@@ -10,6 +10,8 @@ if (numargs <= 3) {
     if (highestnumber < Number(allargs[i])) {
       secondhighestnumber = highestnumber;
       highestnumber = Number(allargs[i]);
+    } else if (Number(allargs[i]) > secondhighestnumber && highestnumber > Number(allargs[i])) {
+      secondhighestnumber = Number(allargs[i]);
     }
   }
   console.log(secondhighestnumber);
