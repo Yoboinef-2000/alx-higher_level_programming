@@ -8,5 +8,8 @@ class Rectangle {
       this.height = h;
     }
   }
+  toString() {
+    return 'Rectangle {}';
+  }
 }
 module.exports = Rectangle;
