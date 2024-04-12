@@ -15,7 +15,7 @@ if __name__ == '__main__':
                          user=theUsername, passwd=thePassword,
                          db=theDatabase, charset="utf8")
     dbcur = db.cursor()
-    dbcur.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'\
+    dbcur.execute("SELECT * FROM states WHERE name LIKE '{}'\
                 ORDER BY states.id ASC".format(theUserInput))
 
     everything = dbcur.fetchall()
