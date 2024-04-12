@@ -15,10 +15,7 @@ if __name__ == '__main__':
                          db=theDatabase, charset="utf8")
     dbcur = db.cursor()
     dbcur.execute("""SELECT * FROM states WHERE name
-                  LIKE BINARY 'N%' ORDER BY states.id ASC""")
+                  LIKE 'N%' ORDER BY states.id ASC""")
     everything = dbcur.fetchall()
     for stts in everything:
         print(stts)
-
-    dbcur.close()
-    db.close()
