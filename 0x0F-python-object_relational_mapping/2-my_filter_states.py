@@ -15,9 +15,8 @@ if __name__ == '__main__':
                          user=theUsername, passwd=thePassword,
                          db=theDatabase, charset="utf8")
     dbcur = db.cursor()
-    dbcur.execute("""SELECT * FROM states
-                   WHERE name = %s ORDER BY
-                   states.id ASC;""", (theUserInput,))
+    dbcur.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'\
+                ORDER BY states.id ASC".format(theUserInput))
 
     everything = dbcur.fetchall()
     for stts in everything:
