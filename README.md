@@ -1,1 +1,1 @@
-This repo will hold python and C exercises offered by the ALX SE program.
+This repo will hold python, JavaScript and a few C exercises offered by the ALX SE program.
