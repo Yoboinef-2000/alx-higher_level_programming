@@ -14,8 +14,10 @@ if __name__ == '__main__':
                          user=theUsername, passwd=thePassword,
                          db=theDatabase, charset="utf8")
     dbcur = db.cursor()
-    dbcur.execute("""SELECT * FROM
-                cities ORDER BY cities.id ASC;""")
+    dbcur.execute("""SELECT cities.id, cities.name, states.name
+                FROM cities LEFT JOIN states
+                  ON states.id = cities.state_id
+                  ORDER BY cities.id ASC;""")
 
     everything = dbcur.fetchall()
     for stts in everything:
