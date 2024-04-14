@@ -11,11 +11,11 @@ if __name__ == '__main__':
     theDatabase = sys.argv[3]
 
     db = MySQLdb.connector.connect(host="localhost", port="3306",
-                         user=theUsername, passwd=thePassword,
-                         db=theDatabase, charset="utf8")
+                                   user=theUsername, passwd=thePassword,
+                                   db=theDatabase, charset="utf8")
     dbcur = db.cursor()
-    dbcur.execute("""SELECT * FROM states WHERE name
-                  LIKE 'N%' ORDER BY id ASC""")
+    dbcur.execute("""SELECT * FROM states WHERE BINARY name
+                  LIKE %s ORDER BY id ASC""", ("%N",))
     everything = dbcur.fetchall()
     for stts in everything:
         print(stts)
