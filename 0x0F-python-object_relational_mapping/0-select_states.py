@@ -19,7 +19,7 @@ if __name__ == '__main__':
                 states ORDER BY states.id ASC;""")
 
     everything = dbcur.fetchall()
-    for stts in everything:
+    for st1ts in everything:
         print(stts)
 
     dbcur.close()
