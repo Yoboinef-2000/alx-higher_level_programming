@@ -11,7 +11,7 @@ if __name__ == "__main__":
     theDatabase = sys.argv[3]
 
     db = MySQLdb.connect(host="localhost", port=3306, user=theUsername,
-                         passwd=thePassword, db=theDatabase)
+                         passwd=thePassword, db=theDatabase, charset="utf8")
     dbcur = db.cursor()
     dbcur.execute("""SELECT * FROM states WHERE name
                   LIKE BINARY 'N%' ORDER BY states.id ASC""")
