@@ -10,9 +10,8 @@ if __name__ == "__main__":
     thePassword = sys.argv[2]
     theDatabase = sys.argv[3]
 
-    db = MySQLdb.connect(host="localhost", port="3306",
-                         user=theUsername, passwd=thePassword,
-                         db=theDatabase, charset="utf8")
+    db = MySQLdb.connect(host="localhost", port=3306, user=theUsername,
+                           passwd=thePassword, db=theDatabase)
     dbcur = db.cursor()
     nameStart = "N%"
     dbcur.execute("""SELECT * FROM states WHERE BINARY name
