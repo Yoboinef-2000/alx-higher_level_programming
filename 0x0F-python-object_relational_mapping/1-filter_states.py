@@ -4,7 +4,7 @@
 import sys
 import MySQLdb
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 
     theUsername = sys.argv[1]
     thePassword = sys.argv[2]
@@ -15,7 +15,7 @@ if __name__ == '__main__':
                                    db=theDatabase, charset="utf8")
     dbcur = db.cursor()
     dbcur.execute("""SELECT * FROM states WHERE BINARY name
-                  LIKE %s ORDER BY id ASC""", ("%N",))
+                  LIKE %s ORDER BY id""", ("%N", ))
     everything = dbcur.fetchall()
     for stts in everything:
         print(stts)
