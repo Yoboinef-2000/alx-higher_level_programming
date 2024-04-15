@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     firstState = sesh.query(State).order_by(State.id).first()
     if firstState:
-        print("{}: {}".format(firstState, firstState.name))
+        print("{}: {}".format(firstState.id, firstState.name))
     else:
         print("Nothing")
 
