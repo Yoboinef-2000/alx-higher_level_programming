@@ -22,7 +22,5 @@ if __name__ == "__main__":
                                        .order_by(State.id))
     for state in aStates:
         print("{}: {}".format(state.id, state.name))
-    else:
-        print("Nothing")
 
     sesh.close()
