@@ -5,6 +5,7 @@ import sys
 from relationship_state import Base, State
 from relationship_city import City
 from sqlalchemy.orm import Session
+from sqlalchemy import create_engine
 
 if __name__ == "__main__":
     theUsername = sys.argv[1]
