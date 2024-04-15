@@ -18,8 +18,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     sesh = Session(engine)
 
-    aStates = sesh.query(State).order_by(State.id)\
-        .filter(State.name.like('%a%'))
+    aStates = sesh.query(State).filter(State.name.like('%a%')
+                                       .order_by(State.id))
     for state in aStates:
         print("{}: {}".format(state.id, state.name))
     else:
