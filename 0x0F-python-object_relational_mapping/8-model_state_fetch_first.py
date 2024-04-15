@@ -11,7 +11,7 @@ if "__name__" == "__main__":
     thePassword = sys.argv[2]
     theDatabase = sys.arg[3]
 
-    engine - create_engine('mysql+mysqldb://{}:{}@localhost/{}'
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
                            .format(theUsername, thePassword,
                                    theDatabase), pool_pre_ping=True)
 
