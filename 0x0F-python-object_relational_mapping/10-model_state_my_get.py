@@ -10,6 +10,7 @@ if __name__ == "__main__":
     theUsername = sys.argv[1]
     thePassword = sys.argv[2]
     theDatabase = sys.argv[3]
+    theStatename = sys.argv[4]
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
                            .format(theUsername, thePassword,
@@ -18,9 +19,10 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     sesh = Session(engine)
 
-    aStates = sesh.query(State).filter(State.name.like('%a%'))\
-        .order_by(State.id)
-    for state in aStates:
-        print("{}: {}".format(state.id, state.name))
+    theState = sesh.query(State).filter(State.name == theStatename).first()
+    if not theState:
+        print("Not found")
+    else:
+        print(theState.id)
 
     sesh.close()

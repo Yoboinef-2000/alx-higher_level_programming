@@ -18,9 +18,9 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     sesh = Session(engine)
 
-    aStates = sesh.query(State).filter(State.name.like('%a%'))\
-        .order_by(State.id)
-    for state in aStates:
-        print("{}: {}".format(state.id, state.name))
+    louis = State(name="Louisiana")
+    sesh.add(louis)
+    sesh.commit()
+    print(louis.id)
 
     sesh.close()
