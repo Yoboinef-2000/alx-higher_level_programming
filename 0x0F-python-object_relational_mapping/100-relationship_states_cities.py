@@ -5,7 +5,7 @@ import sys
 from relationship_state import Base, State
 from relationship_city import City
 from sqlalchemy import create_engine
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
     theUsername = sys.argv[1]
@@ -17,7 +17,8 @@ if __name__ == "__main__":
                                    theDatabase))
 
     Base.metadata.create_all(engine)
-    sesh = Session(engine)
+    Session = sessionmaker(bind=engine)
+    sesh = Session()
 
     cali = State(name='California')
     sanFran = City(name='San Francisco')
