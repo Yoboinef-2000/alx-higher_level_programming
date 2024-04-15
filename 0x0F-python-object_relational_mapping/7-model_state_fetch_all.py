@@ -19,5 +19,5 @@ if __name__ == "__main__":
     sesh = Session(engine)
 
     for stateObj in sesh.query(State).order_by(State.id).all():
-        print(stateObj.id + ": " + stateObj.name)
+        print("{}: {}".format(stateObj.id, stateObj.name))
     sesh.close()
