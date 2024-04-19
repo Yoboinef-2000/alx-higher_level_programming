@@ -22,6 +22,6 @@ if __name__ == "__main__":
     cities = sesh.query(State, City)\
         .filter(City.state_id == State.id).order_by(City.id).all()
     for state, city in cities:
-        print("{}: ({}) {}".format(city.state.name, city.id, city.name))
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
 
     sesh.close()
