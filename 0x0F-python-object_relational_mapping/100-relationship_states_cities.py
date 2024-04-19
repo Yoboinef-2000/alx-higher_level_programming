@@ -7,6 +7,8 @@ from relationship_city import City
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 
+"""Script that creates the State "California
+   with the City "San Fransisco"""
 if __name__ == "__main__":
     theUsername = sys.argv[1]
     thePassword = sys.argv[2]

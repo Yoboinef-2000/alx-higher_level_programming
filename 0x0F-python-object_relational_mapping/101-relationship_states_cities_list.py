@@ -7,6 +7,7 @@ from relationship_city import City
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine
 
+"""List all state objects."""
 if __name__ == "__main__":
     theUsername = sys.argv[1]
     thePassword = sys.argv[2]
