@@ -28,5 +28,3 @@ if __name__ == "__main__":
     sesh.add(cali)
     sesh.add(sanFran)
     sesh.commit()
-
-    sesh.close()
