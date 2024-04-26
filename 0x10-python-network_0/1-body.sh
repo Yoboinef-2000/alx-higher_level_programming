@@ -1,8 +1,8 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # This script takes in a URL, sends a GET request to the URL, and displays the body of th response
 
 theURL="$1"
-curl -s "$theURL" -X GET -L 
+curl -s -X GET -L "$theURL"
 
 # -X : As mentioned in the quiz and the course material for it, this option
 # defines the HTTP method used. I need to put that thorugh my thick head.
