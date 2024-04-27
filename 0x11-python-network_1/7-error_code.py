@@ -11,7 +11,7 @@ import requests
 if __name__ == "__main__":
     theURL = sys.argv[1]
     readURL = requests.get(theURL)
-    if readURL.status_code >= 400:
-        print("Error code:", readURL.status_code)
-    else:
+    if readURL.status_code == 200:
         print(readURL.text)
+    else:
+        print("Error code: ", readURL.status_code)
