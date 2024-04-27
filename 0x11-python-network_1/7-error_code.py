@@ -14,4 +14,4 @@ if __name__ == "__main__":
     if readURL.status_code == 200:
         print(readURL.text)
     else:
-        print("Error code: ", readURL.status_code)
+        print("Error code:", readURL.status_code)

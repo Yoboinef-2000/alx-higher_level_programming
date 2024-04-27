@@ -13,5 +13,5 @@ if __name__ == "__main__":
     theURL = sys.argv[1]
     email = sys.argv[2]
     tobeSent = {'email': email}
-    theResponse = requests.post(url, data=tobeSent)
+    theResponse = requests.post(theURL, data=tobeSent)
     print(theResponse.text)
