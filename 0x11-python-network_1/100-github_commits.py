@@ -18,7 +18,7 @@ if __name__ == "__main__":
     theRequest = requests.get('https://api.github.com/repos/{}/{}/commits'
                               .format(gitHubOwner, gitHubRepo))
 
-    if theRequest >= 400:
+    if theRequest.status_code >= 400:
         print('None')
     else:
         for ola in (c for c in theRequest.json()[:10]):
