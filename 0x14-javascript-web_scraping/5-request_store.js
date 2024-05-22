@@ -12,16 +12,9 @@ request.get(url, function (error, response, body) {
     return;
   }
 
-  if (response.statusCode !== 200) {
-    console.error(response.statusCode);
-    return;
-  }
-
   fs.writeFile(filePath, body, 'utf8', function (err) {
     if (err) {
       console.error(err);
-    } else {
-      console.log(`Successfully saved contents of ${url} to ${filePath}`);
     }
   });
 });
